@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sempeak | İçerik Pazarlaması Dönüşüm Merkezi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap');
+        
+        :root {
+            --primary-blue: #0f172a;
+            --accent-orange: #f97316;
+            --soft-blue: #3b82f6;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--primary-blue);
+            color: #f8fafc;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Modern Gradient Background */
+        .hero-canvas {
+            position: relative;
+            min-height: 90vh;
+            background: radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.15) 0%, transparent 40%),
+                        radial-gradient(circle at 80% 70%, rgba(249, 115, 22, 0.1) 0%, transparent 40%),
+                        #0f172a;
+            display: flex;
+            align-items: center;
+            padding-top: 60px;
+        }
+
+        /* Glassmorphism Form */
+        .glass-form {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 40px;
+            padding: 40px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .modern-input {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 14px 18px;
+            color: white;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .modern-input:focus {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--soft-blue);
+            outline: none;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+        }
+
+        .cta-submit {
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            color: white;
+            padding: 16px;
+            border-radius: 16px;
+            font-weight: 700;
+            width: 100%;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 1.1rem;
+        }
+
+        .cta-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(249, 115, 22, 0.4);
+        }
+
+        /* Floating Animation */
+        .float-anim {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+
+        /* Subtle Text Gradient */
+        .text-gradient {
+            background: linear-gradient(to right, #fff 30%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Marquee Effect for Logos */
+        .logo-scroll {
+            display: flex;
+            width: 200%;
+            animation: scroll 30s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Hero Area -->
+    <section class="hero-canvas">
+        <div class="container mx-auto px-6 lg:px-20">
+            <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                
+                <!-- Left: Content Strategy -->
+                <div class="lg:w-3/5 space-y-8">
+                    <div class="inline-flex items-center gap-3 bg-blue-500/10 border border-blue-500/20 px-5 py-2 rounded-full">
+                        <span class="relative flex h-3 w-3">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+                        </span>
+                        <span class="text-sm font-bold text-blue-400 tracking-wider">İÇERİK PAZARLAMASI 2.0</span>
+                    </div>
+
+                    <h1 class="text-6xl lg:text-8xl font-extrabold leading-none tracking-tight">
+                        Okunur, <br>
+                        <span class="text-gradient">Paylaşılır,</span> <br>
+                        <span class="text-orange-500">Satılır.</span>
+                    </h1>
+
+                    <p class="text-xl text-slate-400 max-w-xl leading-relaxed">
+                        Sadece trafik değil, <span class="text-white font-semibold">müşteri kazandıran</span> içerik stratejileri. Sempeak uzmanlığıyla markanızın hikayesini zirveye taşıyalım.
+                    </p>
+
+                    <div class="flex flex-wrap gap-6 pt-4">
+                        <div class="stat-card">
+                            <div class="text-3xl font-bold text-white mb-1">10M+</div>
+                            <div class="text-xs text-slate-500 uppercase tracking-widest font-bold">Kelime Üretimi</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="text-3xl font-bold text-white mb-1">%140</div>
+                            <div class="text-xs text-slate-500 uppercase tracking-widest font-bold">Ort. Trafik Artışı</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="text-3xl font-bold text-white mb-1">24h</div>
+                            <div class="text-xs text-slate-500 uppercase tracking-widest font-bold">Teklif Süresi</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Interactive Form -->
+                <div class="lg:w-2/5 w-full relative">
+                    <!-- Decorative Elements -->
+                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-orange-500/20 rounded-full blur-3xl"></div>
+                    
+                    <div class="glass-form relative z-10">
+                        <div class="mb-8 text-center">
+                            <h2 class="text-2xl font-bold text-white">Büyümeye Hazır Mısınız?</h2>
+                            <p class="text-slate-400 text-sm mt-2">Stratejinizi uzmanlarımızla bugün kurgulayın.</p>
+                        </div>
+
+                        <form action="#" class="space-y-4">
+                            <div class="input-group">
+                                <select class="modern-input cursor-pointer appearance-none">
+                                    <option value="" disabled selected>Hizmet Seçiniz</option>
+                                    <option>Bütünleşik İçerik Stratejisi</option>
+                                    <option>SEO Odaklı Blog Yönetimi</option>
+                                    <option>E-Ticaret İçerik Operasyonu</option>
+                                    <option>Kurumsal İletişim & PR</option>
+                                </select>
+                                <i class="fas fa-chevron-down absolute right-4 top-4 text-slate-500 pointer-events-none"></i>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="input-group">
+                                    <input type="text" placeholder="Ad Soyad" class="modern-input">
+                                </div>
+                                <div class="input-group">
+                                    <input type="tel" placeholder="Telefon" class="modern-input">
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <input type="email" placeholder="Kurumsal E-posta" class="modern-input">
+                            </div>
+
+                            <div class="input-group">
+                                <input type="url" placeholder="Web Siteniz (Opsiyonel)" class="modern-input">
+                            </div>
+
+                            <button type="submit" class="cta-submit">
+                                Ücretsiz Analiz İstiyorum
+                                <i class="fas fa-arrow-right text-sm"></i>
+                            </button>
+                        </form>
+
+                        <div class="mt-6 flex items-center justify-center gap-4 opacity-50 text-[11px] font-bold uppercase tracking-widest">
+                            <span><i class="fas fa-check-circle text-orange-500 mr-1"></i> Gizlilik Garantisi</span>
+                            <span><i class="fas fa-check-circle text-orange-500 mr-1"></i> Taahhüt Yok</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By Scrolling Band -->
+    <div class="py-12 bg-black/30 border-y border-white/5 overflow-hidden">
+        <div class="logo-scroll gap-16 items-center px-6">
+            <!-- Logos (FontAwesome placeholder style) -->
+            <div class="flex items-center gap-3 opacity-30 hover:opacity-100 transition-opacity">
+                <i class="fab fa-google text-2xl"></i> <span class="font-bold text-xl uppercase tracking-tighter">Google</span>
+            </div>
+            <div class="flex items-center gap-3 opacity-30 hover:opacity-100 transition-opacity">
+                <i class="fab fa-amazon text-2xl"></i> <span class="font-bold text-xl uppercase tracking-tighter">Amazon</span>
+            </div>
+            <div class="flex items-center gap-3 opacity-30 hover:opacity-100 transition-opacity">
+                <i class="fab fa-spotify text-2xl"></i> <span class="font-bold text-xl uppercase tracking-tighter">Spotify</span>
+            </div>
+            <div class="flex items-center gap-3 opacity-30 hover:opacity-100 transition-opacity">
+                <i class="fab fa-microsoft text-2xl"></i> <span class="font-bold text-xl uppercase tracking-tighter">Microsoft</span>
+            </div>
+            <div class="flex items-center gap-3 opacity-30 hover:opacity-100 transition-opacity">
+                <i class="fab fa-airbnb text-2xl"></i> <span class="font-bold text-xl uppercase tracking-tighter">Airbnb</span>
+            </div>
+            <!-- Repeat for infinite scroll -->
+            <div class="flex items-center gap-3 opacity-30 hover:opacity-100 transition-opacity">
+                <i class="fab fa-google text-2xl"></i> <span class="font-bold text-xl uppercase tracking-tighter">Google</span>
+            </div>
+            <div class="flex items-center gap-3 opacity-30 hover:opacity-100 transition-opacity">
+                <i class="fab fa-amazon text-2xl"></i> <span class="font-bold text-xl uppercase tracking-tighter">Amazon</span>
+            </div>
+            <div class="flex items-center gap-3 opacity-30 hover:opacity-100 transition-opacity">
+                <i class="fab fa-spotify text-2xl"></i> <span class="font-bold text-xl uppercase tracking-tighter">Spotify</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
